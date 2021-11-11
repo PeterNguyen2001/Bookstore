@@ -1,8 +1,15 @@
-import ProductList from "../../component/Products/ProductList"
+import ProductList from "../../component/Products/ProductList";
 export default function ProductListHome() {
-    return (
+  var products = [
+    { name: `Leather bag`, price: 150, img: `../picture data/cover.jpg`},
+    { name: `Shoe`, price: 90, img: `../picture data/cover.jpg`},
+    { name: `Shoe`, price: 90, img: `../picture data/cover.jpg`},
+    { name: `Shoe`, price: 90, img: `../picture data/cover.jpg`},
+    { name: `Shoe`, price: 90, img: `../picture data/cover.jpg`},
+  ];
+  return (
     <>
-        <ProductList />
+      <ProductList products={products} />
     </>
-    )
+  );
 }
