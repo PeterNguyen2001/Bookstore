@@ -3,7 +3,7 @@ import { BsCartPlus } from "react-icons/bs";
 
 export default function Header () {
     return (
-        <div className="flex flex-row max-w-screen mx-auto justify-around font-serif">
+        <div className="flex flex-row max-w-screen mx-auto justify-around font-sans">
         <div className="pic">
             
         </div>
