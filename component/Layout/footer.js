@@ -4,7 +4,7 @@ import { BsGoogle } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 export default function Footer() {
   return (
-    <div className="flex flex-col max-w-screen-xl mx-auto font-serif md:flex-row md:justify-center md:space-x-28">
+    <div className="flex flex-col max-w-screen-xl mx-auto font-serif md:flex-row md:justify-center md:space-x-28 py-5">
       <div className="flex flex-col w-9/12">
         <h2 className="text-base font-bold md:text-lg">ABOUT THE STORE</h2>
         <div>
@@ -14,7 +14,7 @@ export default function Footer() {
           randomised words which don't look even slightly believable
         </p>
       </div>
-      <div className="flex flex-col items-start pt-5 md:pt-0">
+      <div className="flex flex-col items-start pt-5 md:pt-5">
         <h2 className="text-base font-bold md:text-lg">CUSTOMER SERVICE</h2>
         <div className="flex flex-col items-start pt-3 space-y-2 md:space-y-4 md:pt-7">
           <button className="text-xs text-gray-400 transition-all duration-150 md:text-sm hover:text-gray-700 hover:underline">
@@ -28,7 +28,7 @@ export default function Footer() {
           </button>
         </div>
       </div>
-      <div className="flex flex-col items-start pt-5 md:pt-0">
+      <div className="flex flex-col items-start pt-5 md:pt-5">
         <h2 className="text-base font-bold md:text-lg">PROFILE</h2>
         <div className="flex flex-col items-start pt-3 space-y-2 md:space-y-4 md:pt-7">
           <button className="text-xs text-gray-400 transition-all duration-150 md:text-sm hover:text-gray-700 hover:underline">
@@ -42,7 +42,7 @@ export default function Footer() {
           </button>
         </div>
       </div>
-      <div className="pt-5 md:pt-0">
+      <div className="pt-5 md:pt-5">
         <h2 className="text-base font-bold md:text-lg">
           SIGN UP FOR OUR AWESOME WORLD
         </h2>
