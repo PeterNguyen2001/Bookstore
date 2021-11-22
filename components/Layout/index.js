@@ -1,6 +1,7 @@
-import Header from './header'
-import Footer from './footer'
-import React, { useState } from 'react'
+import dynamic from 'next/dynamic';
+const Header = dynamic(() => import('./header'))
+const Footer = dynamic(() => import('./footer'))
+
 export default function Layout({ children }) {
   return (
     <div>

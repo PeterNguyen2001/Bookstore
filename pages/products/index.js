@@ -1,5 +1,7 @@
-import ProductList from "../../component/Products/ProductList";
-import ProductFilter from "../../component/Products/ProductFilter";
+import dynamic from "next/dynamic";
+const ProductList = dynamic(() => import("@components/Products/ProductList"))
+const ProductFilter = dynamic(() => import("@components/Products/ProductFilter"))
+
 export default function ProductListHome() {
   var products = [
     { name: `Leather bag`, price: 150, img: `../picture data/cover.jpg` },

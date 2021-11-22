@@ -1,10 +1,10 @@
-import Link from "next/link";
 import { RiFacebookFill } from "react-icons/ri";
 import { BsGoogle } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
+
 export default function Footer() {
   return (
-    <div className="flex flex-col max-w-screen-xl mx-auto font-serif md:flex-row md:justify-center md:space-x-28 py-5">
+    <div className="flex flex-col max-w-screen-xl py-5 mx-auto font-serif md:flex-row md:justify-center md:space-x-28">
       <div className="flex flex-col w-9/12">
         <h2 className="text-base font-bold md:text-lg">ABOUT THE STORE</h2>
         <div>

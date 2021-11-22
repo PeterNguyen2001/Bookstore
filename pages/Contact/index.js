@@ -1,21 +1,19 @@
-import Link from "next/link";
-
 export default function Contact() {
   return (
-    <div class="flex flex-row max-w-screen mx-auto justify-center font-sans">
-      <div class="flex flex-col w-full md:px-32 py-20 px-7">
-        <div class="flex flex-col space-y-5">
-          <h1 class="md:text-3xl text-lg text-gray-500">Send your Massage</h1>
-          <div class="flex md:flex-row flex-col md:space-x-5 md:space-y-0 space-y-5 text-gray-400 md:text-base text-sm">
+    <div className="flex flex-row justify-center mx-auto font-sans max-w-screen">
+      <div className="flex flex-col w-full py-20 md:px-32 px-7">
+        <div className="flex flex-col space-y-5">
+          <h1 className="text-lg text-gray-500 md:text-3xl">Send your Massage</h1>
+          <div className="flex flex-col space-y-5 text-sm text-gray-400 md:flex-row md:space-x-5 md:space-y-0 md:text-base">
             <input
               type="text"
               placeholder="Your name"
-              class="border-2 border-gray-200 px-5 py-2 focus:outline-none w-full"
+              className="w-full px-5 py-2 border-2 border-gray-200 focus:outline-none"
             />
             <input
               type="text"
               placeholder="You email"
-              class="border-2 border-gray-200 px-5 py-2 focus:outline-none w-full"
+              className="w-full px-5 py-2 border-2 border-gray-200 focus:outline-none"
             />
           </div>
           <div>
@@ -25,7 +23,7 @@ export default function Contact() {
               cols="30"
               rows="10"
               placeholder="Your massage"
-              class="md:text-base text-sm border-2 border-gray-200 focus:outline-none w-full px-5 text-gray-400 md:block hidden"
+              className="hidden w-full px-5 text-sm text-gray-400 border-2 border-gray-200 md:text-base focus:outline-none md:block"
             ></textarea>
             <textarea
               name=""
@@ -33,23 +31,23 @@ export default function Contact() {
               cols="30"
               rows="5"
               placeholder="Your massage"
-              class="md:text-base text-sm border-2 border-gray-200 focus:outline-none w-full px-5 text-gray-400 block md:hidden"
+              className="block w-full px-5 text-sm text-gray-400 border-2 border-gray-200 md:text-base focus:outline-none md:hidden"
             ></textarea>
           </div>
           <div>
-            <button class="border-2 border-gray-200 md:text-base text-sm text-white bg-black px-10 py-2 hover:bg-white transition-all duration-200 hover:text-black ">
+            <button className="px-10 py-2 text-sm text-white transition-all duration-200 bg-black border-2 border-gray-200 md:text-base hover:bg-white hover:text-black ">
               SUBMIT
             </button>
           </div>
         </div>
-        <div class="flex md:flex-row flex-col w-full md:pt-20 pt-9 md:space-x-10 md:space-y-0 space-y-5 text-gray-400 md:text-base text-sm">
-          <button class="border-2 rounded-md w-full hover:bg-gray-300 transition-all duration-200 hover:text-black md:py-3 py-2">
+        <div className="flex flex-col w-full space-y-5 text-sm text-gray-400 md:flex-row md:pt-20 pt-9 md:space-x-10 md:space-y-0 md:text-base">
+          <button className="w-full py-2 transition-all duration-200 border-2 rounded-md hover:bg-gray-300 hover:text-black md:py-3">
             Phone +88 888888888
           </button>
-          <button class="border-2 rounded-md w-full hover:bg-gray-300 transition-all duration-200 hover:text-black md:py-3 py-2">
+          <button className="w-full py-2 transition-all duration-200 border-2 rounded-md hover:bg-gray-300 hover:text-black md:py-3">
             Email: bookstore@email.com
           </button>
-          <button class="border-2 rounded-md w-full hover:bg-gray-300 transition-all duration-200 hover:text-black md:py-3 py-2">
+          <button className="w-full py-2 transition-all duration-200 border-2 rounded-md hover:bg-gray-300 hover:text-black md:py-3">
             Address: Univerity of Information Technology (UIT)
           </button>
         </div>
