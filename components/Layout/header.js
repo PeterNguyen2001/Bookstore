@@ -19,7 +19,7 @@ export default function Header() {
                         Contact
                     </button>
                 </div>
-                <div class="flex flex-row space-x-5">
+                <div className="flex flex-row space-x-5">
                     <button className="py-2 text-base text-white transition-all duration-150 bg-black border-2 px-7 hover:bg-gray-400">
                         Login
                     </button>
