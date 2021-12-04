@@ -2,7 +2,7 @@
 import { AiOutlineLeft,AiOutlineRight, AiOutlineClose } from "react-icons/ai";
 export default function Cart () {
     return (
-        <div className="flex flex-col max-w-screen-xl mx-auto font-sans justify-center text-gray-400 space-y-10">
+        <div className="flex flex-col max-w-screen-xl mx-auto font-sans justify-center text-gray-400 space-y-10 pt-32">
         <div>
             <table>
                 <tr>

@@ -1,6 +1,6 @@
 export default function Checkout() {
     return (
-        <div className="flex flex-col justify-center max-w-screen-xl py-5 mx-auto font-sans md:flex-row md:space-x-8 md:items-start">
+        <div className="flex flex-col justify-center max-w-screen-xl py-5 mx-auto font-sans md:flex-row md:space-x-8 md:items-start pt-28">
             <div className="flex flex-col w-10/12 md:w-6/12 space-y-7">
                 <div className="flex flex-col">
                     <h1 className="text-lg text-gray-600 md:text-2xl">BILLING DETAILS</h1>
