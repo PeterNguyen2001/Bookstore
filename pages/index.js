@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import style from '../styles/home.module.css'
 import Book from './Book'
-import { IoMdStarHalf, IoMdStar } from 'react-icons/Io'
-import { AiFillFire } from 'react-icons/ai'
-import { FaHotjar } from 'react-icons/Fa'
-import { SiSalesforce } from 'react-icons/Si'
-import { FaSalesforce } from 'react-icons/Fa'
+import { IoMdStarHalf, IoMdStar } from 'react-icons/io'
+
+import { FaHotjar } from 'react-icons/fa'
+
+import { FaSalesforce } from 'react-icons/fa'
 const url =
   'https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=9H1d2ElvFCaRm8vTFszDN44AdGaryTCm'
 export default function Home() {
@@ -390,18 +390,6 @@ export default function Home() {
           <button className={style.buttonEmail}>Subsribe</button>
         </div>
       </div>
-
-      <footer className='flex items-center justify-center w-full h-24 border-t'>
-        <a
-          className='flex items-center justify-center'
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Powered by{' '}
-          <img src='/vercel.svg' alt='Vercel Logo' className='h-4 ml-2' />
-        </a>
-      </footer>
     </div>
   )
 }
