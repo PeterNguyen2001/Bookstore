@@ -15,7 +15,7 @@ export default function Productdetail({ id }) {
   return (
     <div className='flex flex-col max-w-screen-xl mx-auto justify-center items-center'>
       <div className='grid md:grid-cols-12 md:gap-20'>
-        <div className='col-span-5'>~
+        <div className='col-span-5'>
           <img
             src='https://kenhphimtv.com/wp-content/uploads/2020/07/41146-bong-ma-anh-quoc-phan-5.jpg'
             className='w-full'

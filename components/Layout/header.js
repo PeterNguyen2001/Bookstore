@@ -8,24 +8,22 @@ export default function Header() {
         <div className='flex flex-row items-center space-x-5'>
           <div className='flex flex-row space-x-5'>
             <button className='text-xs text-gray-600 uppercase transition-all duration-150 hover:text-black hover:underline'>
-              Home
+              <a href='/'>Home</a>
             </button>
             <button className='text-xs text-gray-600 uppercase transition-all duration-150 hover:text-black hover:underline'>
-              Shop
+              <a href=''>Shop</a>
             </button>
+
             <button className='text-xs text-gray-600 uppercase transition-all duration-150 hover:text-black hover:underline'>
-              Pages
-            </button>
-            <button className='text-xs text-gray-600 uppercase transition-all duration-150 hover:text-black hover:underline'>
-              Contact
+              <a href='/Contact'>Contact</a>
             </button>
           </div>
           <div className='flex flex-row space-x-5'>
             <button className='py-2 text-base text-white transition-all duration-150 bg-black border-2 px-7 hover:bg-gray-400'>
-              Login
+              <a href='/login'>Login</a>
             </button>
             <button className='py-2 text-base text-white transition-all duration-150 bg-black border-2 px-7 hover:bg-gray-400'>
-              Register
+              <a href='/register'>Register</a>
             </button>
             <button className='text-xl transition-all duration-200 hover:text-gray-400'>
               <BsCartPlus />
