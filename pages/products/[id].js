@@ -1,9 +1,11 @@
 import { AiOutlineLeft, AiOutlineRight, AiOutlineTwitter } from 'react-icons/ai'
 import { FaFacebookF } from 'react-icons/fa'
 import { FiInstagram } from 'react-icons/fi'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
+import { Context } from '../../context/index'
 import axios from 'axios'
 export default function Productdetail({ id }) {
+  const { handleAddToCart } = useContext(Context)
   const [product, setProduct] = useState({})
 
   useEffect(() => {
@@ -69,7 +71,7 @@ export default function Productdetail({ id }) {
                 <AiOutlineRight />
               </span>
             </div> */}
-            <button className='border-2 bg-gray-800 text-white text-xs px-7 py-2 hover:bg-white hover:text-black transition-all duration-200'>
+            <button onClick={() => handleAddToCart(product, 1)} className='border-2 bg-gray-800 text-white text-xs px-7 py-2 hover:bg-white hover:text-black transition-all duration-200'>
               ADD TO CART
             </button>
           </div>

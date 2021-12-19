@@ -1,44 +1,63 @@
 
 import { AiOutlineLeft,AiOutlineRight, AiOutlineClose } from "react-icons/ai";
+import { useContext, useState, useEffect } from 'react'
+import { Context } from '../../context/index'
+
 export default function Cart () {
+    const [cart, setCart] = useState([])
+    const { getCart, removeFromCart } = useContext(Context)
+
+    useEffect(() => {
+        setCart(getCart())
+    },[])
+
+
+    function remove(id) {
+        var newCart = removeFromCart(id);
+        setCart(newCart)        
+    }
     return (
         <div className="flex flex-col max-w-screen-xl mx-auto font-sans justify-center text-gray-400 space-y-10 pt-32">
         <div>
             <table>
-                <tr>
-                    <th className="border-2 md:px-20 px-10 py-2">IMAGE</th>
-                    <th className="border-2 md:px-36 px-10 ">PRODUCT</th>
-                    <th className="border-2 md:px-20 px-8 py-2">PRICE</th>
-                    <th className="border-2 md:px-20 px-8 py-2">QUANTITY</th>
-                    <th className="border-2 md:px-20 px-5 py-2">TOTAL</th>
-                    <th className="border-2 md:px-20 px-5 py-2">REMOVE</th>
-                </tr>
-                <tr>
-                    <td className="border-2 text-center">
-                        dsfcfd
-                    </td>
-                    <td className="border-2 text-center">
-                        efwefwef
-                    </td>
-                    <td className="border-2 text-center">
-                        edfefefe
-                    </td>
-                    <td className="border-2">
-                        <div className="flex flex-row items-center border-2 px-3 md:w-6/12 w-9/12">
-                        <span className=""><AiOutlineLeft /></span>
-                        <input type="text" className="w-9/12 py-2 focus:outline-none text-center" />
-                        <span className=""><AiOutlineRight /></span>
-                        </div>
-                    </td>
-                    <td className="border-2 text-center">
-                        dwded
-                    </td>
-                    <td className="border-2 text-center">
-                        <button className="text-lg hover:text-gray-700 transition-all duration-200">
-                        <AiOutlineClose />
-                        </button>
-                    </td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th className="border-2 md:px-20 px-10 py-2">IMAGE</th>
+                        <th className="border-2 md:px-36 px-10 ">PRODUCT NAME</th>
+                        <th className="border-2 md:px-20 px-8 py-2">PRICE</th>
+                        <th className="border-2 md:px-20 px-8 py-2">QUANTITY</th>
+                        <th className="border-2 md:px-20 px-5 py-2">TOTAL</th>
+                        <th className="border-2 md:px-20 px-5 py-2">REMOVE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {
+                    cart?.map((item, idx) => (
+                        <tr key={idx}>
+                            <td className="border-2 flex items-center justify-center py-5">
+                                <img src={item.image} className="w-16 h-16" />
+                            </td>
+                            <td className="border-2 text-center">
+                                {item.name}
+                            </td>
+                            <td className="border-2 text-center">
+                                {item.price}
+                            </td>
+                            <td className="border-2 text-center">
+                                <input defaultValue={item.quantity} className="border-0 w-2/12" />
+                            </td>
+                            <td className="border-2 text-center">
+                                {item.price}
+                            </td>
+                            <td className="border-2 text-center">
+                                <button onClick={() => remove(item.id)} className="text-lg hover:text-gray-700 transition-all duration-200">
+                                    <AiOutlineClose />
+                                </button>
+                            </td>
+                        </tr>
+                    ))
+                }
+                </tbody>
             </table>
         </div>
         <div className="flex md:flex-row flex-col md:justify-between md:space-y-0 space-y-10">

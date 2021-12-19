@@ -4,13 +4,14 @@ const ProductList = dynamic(() => import('@components/Products/ProductList'), {
 })
 // const ProductFilter = dynamic(() => import("@components/Products/ProductItem"), { loading: () => <p>...</p> })
 import axios from 'axios'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
+import { Context } from '../../context/index'
+
 export default function ProductListHome() {
   const [productList, setProductList] = useState([])
-
+  const {getCart, handleAddToCart} = useContext(Context)
   useEffect(() => {
     axios.get('/api/product').then((res) => {
-      console.log(res)
       setProductList(res.data)
     })
   }, [])
@@ -24,7 +25,7 @@ export default function ProductListHome() {
   return (
     <>
       {/* <ProductFilter /> */}
-      <ProductList products={productList} />
+      <ProductList products={productList} handleAddToCart={handleAddToCart} />
     </>
   )
 }
