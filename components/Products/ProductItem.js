@@ -1,11 +1,13 @@
 import { BsCart2 } from "react-icons/bs";
 import { GrFormView } from "react-icons/gr";
 import { AiOutlineHeart } from "react-icons/ai";
+import Link from 'next/link'
+
 export default function ProductItem({ product }) {
   return (
     <div className="flex flex-col items-center min-w-full text-center transition-all duration-200 border group hover:shadow-lg hover:cursor-pointer">
       <div className="relative">
-        <img className="md:w-full md:h-72" src={product.img} />
+        <img className="md:w-full md:h-72" src={product.image} />
         <div className="absolute flex flex-row justify-center min-w-full gap-3 bg-transparent bottom-2">
           <button className="hidden p-2 transition-all duration-500 bg-gray-300 rounded-full group-hover:block">
             <BsCart2 />
@@ -20,7 +22,11 @@ export default function ProductItem({ product }) {
       </div>
 
       <div className="w-full px-3 py-3 border-t">
-        <div>{product.name}</div>
+        <div>
+          <Link href={`/products/${product.id}`}>
+            <a>{product.name}</a>
+          </Link>
+        </div>
         <div>€{product.price}</div>
       </div>
     </div>

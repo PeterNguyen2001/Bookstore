@@ -8,7 +8,7 @@ export default function Productdetail({ id }) {
 
   useEffect(() => {
     if (id) {
-      axios.get(`/api/product?id=${id}`).then((result) => console.log(result))
+      axios.get(`/api/product?id=${id}`).then((result) => setProduct(result.data))
     }
   }, [id])
 
@@ -17,7 +17,7 @@ export default function Productdetail({ id }) {
       <div className='grid md:grid-cols-12 md:gap-20'>
         <div className='col-span-5'>
           <img
-            src='https://kenhphimtv.com/wp-content/uploads/2020/07/41146-bong-ma-anh-quoc-phan-5.jpg'
+            src={product.image ?? "https://kenhphimtv.com/wp-content/uploads/2020/07/41146-bong-ma-anh-quoc-phan-5.jpg"}
             className='w-full'
           />
           {/* <div className='flex flex-row space-x-3 pt-3'>
@@ -36,21 +36,17 @@ export default function Productdetail({ id }) {
           </div> */}
         </div>
         <div className='col-span-7 space-y-7 pt-16'>
-          <h1 className='md:text-3xl text-2xl text-gray-700 font-bold'>
-            PEAKY BLINDERS
+          <h1 className='md:text-3xl text-2xl text-gray-700 font-bold uppercase'>
+            {product.name ?? "PEAKY BLINDERS"}
           </h1>
-          <p className='md:text-xl text-lg text-gray-600'>$10.00</p>
+          <p className='md:text-xl text-lg text-gray-600'>$ {product.price}.00</p>
           <div className='flex flex-col space-y-4'>
             <div>
               <label className='text-gray-500'>Quick Overview</label>
               <div className='w-10 h-0.5 bg-gray-400'></div>
             </div>
             <p className='text-gray-400 md:text-base text-sm'>
-              Peaky Blinders is an epic following of a gangster family of
-              Irish-Romani origin set in Birmingham, England, in 1919, several
-              months after the end of the First World War in November 1918. The
-              story centres on the Peaky Blinders gang and their ambitious and
-              highly cunning boss Tommy Shelby (Murphy).
+              {product.description ?? "description"}
             </p>
           </div>
           <div className='flex flex-col space-y-4'>
@@ -58,7 +54,7 @@ export default function Productdetail({ id }) {
               <label className='text-gray-500'>Author</label>
               <div className='w-10 h-0.5 bg-gray-400'></div>
             </div>
-            <p className='text-gray-400'>James Bond, Alex Mix</p>
+            <p className='text-gray-400'>{product.author ?? "Author"}</p>
           </div>
           <div className='flex flex-row space-x-5'>
             {/* <div className='flex flex-row items-center border-2 px-3 md:w-2/12 w-3/12 text-gray-400 text-sm'>
